@@ -90,6 +90,7 @@ function opendesktop_supports($feature) {
 		case FEATURE_GRADE_HAS_GRADE:         return false;
 		case FEATURE_GRADE_OUTCOMES:          return false;
 		case FEATURE_BACKUP_MOODLE2:          return true;
+		case FEATURE_ADVANCED_GRADING:		  return false;
 
 		default: return null;
 	}
@@ -194,12 +195,15 @@ function opendesktop_scale_used($opendesktopid, $scaleid) {
  * @return boolean True if the scale is used by any opendesktop
  */
 function opendesktop_scale_used_anywhere($scaleid) {
+	/**
 	global $DB;
 	if ($scaleid and $DB->record_exists('opendesktop', array('grade' => -$scaleid))) {
 		return true;
 	} else {
 		return false;
 	}
+	**/
+	return false;
 }
 
 
