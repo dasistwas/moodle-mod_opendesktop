@@ -277,11 +277,11 @@ class opendesktop implements renderable {
 					$sessvaldetect = $this->session->sessionstatus($CFG->opendesktop_useprefix.$canstartuser->username);
 					// check if the opendesktop was started in the same course, if not do not display the possibility to join
 					if ($sessvaldetect['status'] == 'active' && $sessvaldetect['isregistered']) {
-						if  (has_capability('mod/opendesktop:joinpassive', $this->context)){						
-							$url[$canstartuser->username]['active'] = new moodle_url($PAGE->url, array('id' => $this->cm->id, 'task' => 'join', 'join' => 'passive', 'sesskey' => sesskey(), 'sessionmode' => $sessionmode, 'ovduser' => $canstartuser->id));
+						if  (has_capability('mod/opendesktop:joinactive', $this->context)){						
+							$url[$canstartuser->username]['active'] = new moodle_url($PAGE->url, array('id' => $this->cm->id, 'task' => 'join', 'join' => 'active', 'sesskey' => sesskey(), 'sessionmode' => $sessionmode, 'ovduser' => $canstartuser->id));
 						}
 						if  (has_capability('mod/opendesktop:joinpassive', $this->context)){
-							$url[$canstartuser->username]['passive'] = new moodle_url($PAGE->url, array('id' => $this->cm->id, 'task' => 'join', 'join' => 'active', 'sesskey' => sesskey(), 'sessionmode' => $sessionmode, 'ovduser' => $canstartuser->id));
+							$url[$canstartuser->username]['passive'] = new moodle_url($PAGE->url, array('id' => $this->cm->id, 'task' => 'join', 'join' => 'passive', 'sesskey' => sesskey(), 'sessionmode' => $sessionmode, 'ovduser' => $canstartuser->id));
 						}
 						$url[$canstartuser->username]['fullname'] = $canstartuser->firstname.' '.$canstartuser->lastname;
 					}

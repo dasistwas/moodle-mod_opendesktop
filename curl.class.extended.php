@@ -19,6 +19,8 @@ class opendesktop_curl_session extends opendesktop_curl {
 	/**private $sessval = false;**/
 	/** @var string url for joining a running opendesktop **/
 	public $iframeurl = "";
+	/** @var string url for joining a running opendesktop in view only mode**/
+	public $iframeurlpassive = "";
 	/** @var int opendesktopid **/
 	public $opendesktopid = null;
 	/** @var array get and post variables from form submission **/
@@ -179,7 +181,7 @@ class opendesktop_curl_session extends opendesktop_curl {
 		$returnb = $this->post($this->sessurl."/admin/sessions.php", $curl_formoptions, array('CURLOPT_COOKIEFILE'=>$this->cookiefile,
 				'CURLOPT_HEADER'=>1));
 		preg_match('/http.+/', $returnb, $inviteurl);
-		$this->iframeurl = $inviteurl[0];
+		$this->iframeurl = $inviteurl[0];		
 	}
 	
 	public function logout(){

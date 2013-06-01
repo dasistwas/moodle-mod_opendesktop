@@ -80,11 +80,13 @@ class mod_opendesktop_renderer extends plugin_renderer_base implements renderabl
 		 $messages = html_writer::tag('span',$message, array('class' => 'opendesktop_notifications'));
 		 $o .= html_writer::tag('div', $buttons.$messages, array('class' => 'opendesktop_layout'));	 	
 		 $o .= html_writer::tag('div','?id='.$data->cmid.'&task=register&sessionmode='.$data->params['sessionmode'].'&sesskey='.sesskey(), array('class' => 'openviewregister'));
+		 
 		 if($data->opendesktop->desktopsize = 'auto'){
 		 	$parameter = array('src' => $data->session->iframeurl, 'width' => $data->opendesktop->width, 'height' => $data->opendesktop->height, 'class' => 'opendesktop_iframe opendesktop_iframes');
 		 } else {
 		 	$parameter = array('src' => $data->session->iframeurl, 'width' => $data->opendesktop->width, 'height' => $data->opendesktop->height, 'class' => 'opendesktop_iframes');
 		 }
+		 
 		 $iframe = html_writer::tag('iframe','', $parameter);
 		 $o .= html_writer::tag('div', $iframe, array('class' => 'opendesktop_iframecontainer'));
 		 if($data->params['sessionmode'] == 'desktopplus'){
