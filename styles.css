@@ -17,7 +17,7 @@
 	width: 100%;
 	height: 100%;
 }
-#page-mod-opendesktop-openview #launch_button, #page-mod-opendesktop-openview #failed_button, #page-mod-opendesktop-openview #java_download {
+#page-mod-opendesktop-view #launch_button, #page-mod-opendesktop-view #failed_button, #page-mod-opendesktop-view #java_download {
 	display: none;
 }
 .pagelayout-embedded.path-mod-opendesktop {
@@ -63,7 +63,7 @@
 .opendesktop_switched .opendesktop_switchit {
 	background: url([[pix:mod_opendesktop|monitor]]) #ddd no-repeat top left;
 }
-#page-mod-opendesktop-openview #maincontent {
+#page-mod-opendesktop-view #maincontent {
 	display: none;
 }
 
