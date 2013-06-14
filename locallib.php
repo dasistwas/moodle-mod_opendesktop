@@ -302,7 +302,11 @@ class opendesktop implements renderable {
 		global $DB,$CFG;
 		$bbbs = $DB->get_records('bigbluebuttonbn',array('course'=>$this->course->id));
 		if(!empty($bbbs)){
-			$cm =get_coursemodule_from_instance('bigbluebuttonbn', $bbbs[1]->id);
+			//TODO! the first occurance of an bigbluebutton instance is used, should be made 
+			//selectable which one to choose if there are
+			//more than 1 bbbs in a course
+			$first_bbb_id = key($bbbs);
+			$cm = get_coursemodule_from_instance('bigbluebuttonbn', $first_bbb_id);
 			$bbb = new moodle_url($CFG->wwwroot."/mod/bigbluebuttonbn/view.php", array('id'=>$cm->id));
 		} else {
 			$bbb = "error";
