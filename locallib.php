@@ -139,8 +139,8 @@ class opendesktop implements renderable {
 				} else {
 					$output = "fail";
 				}
-			} else {		$params['bigbluebuttonlink'] = $this->bigbluebutton();
-				
+			} else {		
+				$params['bigbluebuttonlink'] = $this->bigbluebutton();
 				$output = "success";
 			}
 		} else {
@@ -303,6 +303,7 @@ class opendesktop implements renderable {
 		$bbbs = $DB->get_records('bigbluebuttonbn',array('course'=>$this->course->id));
 		if(!empty($bbbs)){
 			$cm =get_coursemodule_from_instance('bigbluebuttonbn', $bbbs[1]->id);
+			print_object($cm);
 			$bbb = new moodle_url($CFG->wwwroot."/mod/bigbluebuttonbn/view.php", array('id'=>$cm->id));
 		} else {
 			$bbb = "error";
