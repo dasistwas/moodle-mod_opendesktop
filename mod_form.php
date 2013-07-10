@@ -49,10 +49,6 @@ class mod_opendesktop_mod_form extends moodleform_mod {
 		/// Adding the rest of opendesktop settings, spreeading all them into this fieldset
 		/// or adding more fieldsets ('header' elements) if needed for better logic
 		$mform->addElement('header', 'opendesktophdr', get_string('opendesktop_options', 'opendesktop'));
-		$windowoptions=array();
-		$windowoptions['normal'] = get_string('opendesktoponly', 'opendesktop');
-		$windowoptions['presentation'] = get_string('presentationmode', 'opendesktop');
-		$mform->addElement('select', 'windowmode', get_string('windowmode', 'opendesktop'), $windowoptions);
 		$displayoptions=array();
 		$displayoptions['auto'] = get_string('autosize','opendesktop');
 		$displayoptions['800x600'] = get_string('small43','opendesktop');

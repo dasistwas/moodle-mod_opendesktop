@@ -1,6 +1,7 @@
 <?php
 
 $string['opendesktop'] = 'OpenDesktop';
+$string['pluginname'] = 'OpenDesktop';
 
 $string['modulename'] = 'OpenDesktop';
 $string['modulenameplural'] = 'OpenDesktops';
