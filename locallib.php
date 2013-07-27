@@ -52,10 +52,10 @@ class opendesktop implements renderable {
 		$this->session = new opendesktop_curl_session(array(), $opendesktop->id);
 		$this->config = get_config('opendesktop');
 		//calculate the width and height of the virtual desktop
-		if($opendesktop->desktopsize == 'auto'){
+		if($opendesktop->desktopsize === 'auto'){
 			$this->opendesktop->width = $this->opendesktop->height = '100%';
 		} else {
-			preg_match('/(\d+)x(\d+)/',$opendesktop->desktopsize,$matches);
+			preg_match('/(\d+).(.+)/',$opendesktop->desktopsize,$matches);
 			$this->opendesktop->width = $matches[1];
 			$this->opendesktop->height = $matches[2];
 		}
