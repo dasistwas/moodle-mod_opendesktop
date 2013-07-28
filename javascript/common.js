@@ -187,6 +187,7 @@ YUI().use("node", "event", "io-base","transition", function (Y) {
 			setTimeout(function() {
 				registerdesktop(); }, 16000);
 		}
+		
 		if(Y.one('.opendesktop_switchit')){
 			setTimeout(function() {
 					switchiframes(); }, 2000);
@@ -201,8 +202,8 @@ YUI().use("node", "event", "io-base","transition", function (Y) {
 		}
 	});
 
-    Y.on("available", appletLoaded, "#check_java", Y, "The 'available' event fired on the element 'contentContainer'.  That element is present in the DOM.");
-    Y.on("available", changeHeight, ".opendesktop_iframecontainer", Y, "The 'available' event fired on the element 'contentContainer'.  That element is present in the DOM.");
+    Y.on("available", appletLoaded, "#check_java", Y, "");
+    Y.on("available", changeHeight, ".opendesktop_iframecontainer", Y, "");
 	Y.on('io:complete', complete, Y, ['lorem', 'ipsum']);
 	if(Y.one('.opendesktop_switchit')){
 		Y.one('.opendesktop_switchit').on('click', switchiframes);
