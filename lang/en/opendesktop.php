@@ -48,6 +48,7 @@ $string['small43'] = 'Small 4:3(800x600)';
 $string['normal43'] = 'Normal 4:3(1024x768)';
 $string['huge43'] = 'Large 4:3(1280x1024)';
 $string['small169'] = 'Small 16:9(854x480)';
+$string['medium169'] = 'Medium 16:9(1024x576)';
 $string['normal169'] = 'Normal 16:9(1280x720)';
 $string['fullhd169'] = 'FullHD 16:9(1920x1080)';
 $string['desktopsize'] = 'Display size';

@@ -55,6 +55,7 @@ class mod_opendesktop_mod_form extends moodleform_mod {
 		$displayoptions['1024x768'] = get_string('normal43','opendesktop');
 		$displayoptions['1280x1024'] = get_string('huge43','opendesktop');
 		$displayoptions['854×480'] = get_string('small169','opendesktop');
+		$displayoptions['1024×576'] = get_string('medium169','opendesktop');
 		$displayoptions['1280x720'] = get_string('normal169','opendesktop');
 		$displayoptions['1920x1080'] = get_string('fullhd169','opendesktop');
 		$mform->addElement('select', 'desktopsize', get_string('desktopsize', 'opendesktop'), $displayoptions);
