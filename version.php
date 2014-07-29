@@ -8,10 +8,11 @@
  * @package opendesktop
  **/
 
-$module->version  = 2013072900;  // The current module version (Date: YYYYMMDDXX)
-$module->requires = 2012120300;  // Requires this Moodle 2.X version
-$module->release = '2.4.2';
-$module->maturity = MATURITY_BETA;
-$module->cron     = 0;           // Period for cron to check this module (secs)
+$plugin->version  = 2013112502;  // The current module version (Date: YYYYMMDDXX)
+$plugin->requires = 2012120300;  // Requires this Moodle 2.X version
+$plugin->component = 'mod_opendesktop';
+$plugin->release = '2.4.2';
+$plugin->maturity = MATURITY_BETA;
+$plugin->cron     = 0;           // Period for cron to check this module (secs)
 
 ?>
