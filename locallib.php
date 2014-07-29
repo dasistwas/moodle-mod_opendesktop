@@ -107,7 +107,7 @@ class opendesktop implements renderable {
 	 * @param post and get values submitted by the user $params
 	 */
 	private function view_printlogin($params){
-		global $OUTPUT, $PAGE;
+		global $PAGE, $OUTPUT;
 		require_capability('mod/opendesktop:start', $this->context);
 		$PAGE->force_theme('standard');
 		$PAGE->set_pagelayout('embedded');
@@ -208,6 +208,7 @@ class opendesktop implements renderable {
 		$PAGE->requires->js('/mod/opendesktop/javascript/common.js');
 		$PAGE->requires->js('/mod/opendesktop/javascript/timezones.js');
 		$PAGE->add_body_class('opendesktop_overview');
+		
 		$this->renderer = $this->get_renderer();
 		$params['ovdstartlink'] = $this->display_startbutton();
 		$params['availabledesktops'] = $this->available_desktops();

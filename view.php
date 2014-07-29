@@ -43,6 +43,7 @@ $PAGE->set_context($context);
 $url = new moodle_url('/mod/opendesktop/view.php', array('id'=>$id));
 $PAGE->set_url($url);
 $PAGE->set_title(get_string('modulename', 'opendesktop'));
+$PAGE->set_heading($course->fullname);
 
 $openview = new opendesktop($context, $cm, $course, $opendesktop);
 
